@@ -3,7 +3,7 @@
 
 使い方
 
-/serveropen <text>　または /svo <text>
+/serveropen <text> または /svo <text>
   
 <text>の所に
   
@@ -14,6 +14,12 @@
 <text>の所に
   
 ブロックを設置・壊せなくするワールド名を入れてください。
+
+/dev でクレジット
+
+/os <text> で <text> に "dev" でクレジット "by" で作者 "github" で私のGitHubとこのレポジトリ
+  
+/
 
 
 
