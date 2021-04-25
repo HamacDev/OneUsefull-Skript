@@ -1,11 +1,10 @@
 ##ここから--------------------
 
 command /menu
-    executable by: console
+permission: skript.player
     trigger:
         open chest with 3 row named "Welcome" to player
         set slot 13 of player's current inventory to nether_star named "&a- &7Lobby &a-"
-        
 on inventory click:
     if name of player's current inventory contain "Welcome":
         cansel event
@@ -102,5 +101,10 @@ command /lobbymuki2 [<text>]
 command /lobby
     executable by: console
     trigger:
-            execute console command "/tp @p {spawnlobbyx} {spawnlobbyy} {spawnlobbyz} {spawnlobbymuki1} {spawnlobbymuki2}
+            execute console command "/tp %player% {spawnlobbyx} {spawnlobbyy} {spawnlobbyz} {spawnlobbymuki1} {spawnlobbymuki2}
         send "Teleport!" to player
+command /an [<text>]:
+    trigger:
+        anaunsu = <text>
+        command "/tellraw @a [{"text":"【","color":"dark_blue"},{"text":"アナウンス","color":"blue"},{"text":"】 ","color":"dark_blue"},{"text":"{anaunsu}","color":"white"}]"
+        send "&6| | &cアナウンスを表示&fしました。 &6| |"
