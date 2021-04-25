@@ -1,0 +1,3 @@
+on join:
+    loop all players:
+        send "&a%player%&rさん、&cようこそ！" to player
