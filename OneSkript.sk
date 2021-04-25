@@ -50,7 +50,7 @@ command /svo <text>:
         else:
             send "&6| | &cそのコマンドは存在しません！ &6| |" to player
            
-command /noblock <text>:
+command /noblock:
     Options:
         parkour_map_name: <text>
     trigger:
