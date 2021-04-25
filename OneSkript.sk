@@ -1,13 +1,13 @@
 command /serveropen <text>:
     trigger:
-        if arg-1 is "close":
+        if arg-1 is "c":
             execute console command "/whitelist on"
             loop all players:
                 if loop-player is not an op:
                     kick the loop-player due to "サーバーが非公開です"
             send "&6| | &cホワリスオンじゃ！！！！！ &6| |" to player
             stop
-        if arg-1 is "open":
+        if arg-1 is "o":
             execute console command "/whitelist off"
             send "&6| | &cホワリスオフじゃ！！！！！ &6| |" to player
             stop
@@ -16,14 +16,14 @@ command /serveropen <text>:
             
 command /svo <text>:
     trigger:
-        if arg-1 is "close":
+        if arg-1 is "c":
             execute console command "/whitelist on"
             loop all players:
                 if loop-player is not an op:
                     kick the loop-player due to "サーバーが非公開です"
             send "&6| | &cホワリスオンじゃ！！！！！ &6| |" to player
             stop
-        if arg-1 is "open":
+        if arg-1 is "o":
             execute console command "/whitelist off"
             send "&6| | &cホワリスオフじゃ！！！！！ &6| |" to player
             stop
@@ -42,3 +42,46 @@ command /noblock <text>:
             player is in {@parkour_map_name}
             player's gamemode is not creative
             cancel event 
+command /dev:
+    trigger:
+        send "deloped by &cHamac"
+        send "&0Git&fHub &6:&r &nhttps://github.com/HamacDev/One-Skript"
+        send "&6| | &cThank you for installing! &6| |"
+        send "&6| | &cインストールしていただきありがとうございます！ &6| |"
+command /os [<text>]:
+    trigger:
+        if arg-1 is "dev":
+            execute console command "/dev"
+        if arg-1 is "by":
+            send "by Hamac"
+        if arg-1 is "github":
+            send "Repository https://github.com/HamacDev/One-Skript"
+            send "Portfolio https://HamacDev.github.io"
+        if arg-1 is "by":
+            send "by Hamac"
+        if arg-1 is not set:
+            send "&cOut :何か入力してください"
+            send "&cE&4r&cr&4o&cr&4!"
+command /lobbysetx [<text>]
+    trigger:
+        spawnlobbyx = <text>
+        send "xを設定しました"
+command /lobbysety [<text>]
+    trigger:
+        spawnlobbyy = <text>
+        send "yを設定しました"
+command /lobbysetz [<text>]
+    trigger:
+        spawnlobbyz = <text>
+        send "zを設定しました"
+command /lobbymuki1 [<text>]
+    trigger:
+        spawnlobbymuki1 = <text>
+        send "1個目の向きを設定しました"
+command /lobbymuki2 [<text>]
+    trigger:
+        spawnlobbymuki2 = <text>
+        send "2個目の向きを設定しました"
+command /lobby
+    trigger:
+            execute console command "/tp @p {spawnlobbyx} {spawnlobbyy} {spawnlobbyz} {spawnlobbymuki1} {spawnlobbymuki2}
