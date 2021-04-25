@@ -60,44 +60,45 @@ command /noblock <text>:
             cancel event 
 command /dev:
     trigger:
-        send "deloped by &cHamac"
-        send "&0Git&fHub &6:&r &nhttps://github.com/HamacDev/One-Skript"
-        send "&6| | &cThank you for installing! &6| |"
-        send "&6| | &cインストールしていただきありがとうございます！ &6| |"
+        send "deloped by &cHamac" to player
+        send "&0Git&fHub &6:&r &nhttps://github.com/HamacDev/One-Skript" to player
+        send "&6| | &cThank you for installing! &6| |" to player
+        send "&6| | &cインストールしていただきありがとうございます！ &6| |" to player
 command /os [<text>]:
     trigger:
         if arg-1 is "dev":
             execute console command "/dev"
         if arg-1 is "by":
-            send "by Hamac"
+            send "by Hamac" to player
         if arg-1 is "github":
-            send "Repository https://github.com/HamacDev/One-Skript"
-            send "Portfolio https://HamacDev.github.io"
+            send "Repository https://github.com/HamacDev/One-Skript" to player
+            send "Portfolio https://HamacDev.github.io" to player
         if arg-1 is "by":
-            send "by Hamac"
+            send "by Hamac" to player
         if arg-1 is not set:
-            send "&cOut :何か入力してください"
-            send "&cE&4r&cr&4o&cr&4!"
+            send "&cOut :何か入力してください" to player
+            send "&cE&4r&cr&4o&cr&4!" to player
 command /lobbysetx [<text>]
     trigger:
         spawnlobbyx = <text>
-        send "xを設定しました"
+        send "xを設定しました" to player
 command /lobbysety [<text>]
     trigger:
         spawnlobbyy = <text>
-        send "yを設定しました"
+        send "yを設定しました" to player
 command /lobbysetz [<text>]
     trigger:
         spawnlobbyz = <text>
-        send "zを設定しました"
+        send "zを設定しました" to player
 command /lobbymuki1 [<text>]
     trigger:
         spawnlobbymuki1 = <text>
-        send "1個目の向きを設定しました"
+        send "1個目の向きを設定しました" to player
 command /lobbymuki2 [<text>]
     trigger:
         spawnlobbymuki2 = <text>
-        send "2個目の向きを設定しました"
+        send "2個目の向きを設定しました" to player
 command /lobby
     trigger:
             execute console command "/tp @p {spawnlobbyx} {spawnlobbyy} {spawnlobbyz} {spawnlobbymuki1} {spawnlobbymuki2}
+        send "Teleport!" to player
