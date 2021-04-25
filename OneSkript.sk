@@ -1,0 +1,44 @@
+command /serveropen <text>:
+    trigger:
+        if arg-1 is "close":
+            execute console command "/whitelist on"
+            loop all players:
+                if loop-player is not an op:
+                    kick the loop-player due to "サーバーが非公開です"
+            send "&6| | &cホワリスオンじゃ！！！！！ &6| |" to player
+            stop
+        if arg-1 is "open":
+            execute console command "/whitelist off"
+            send "&6| | &cホワリスオフじゃ！！！！！ &6| |" to player
+            stop
+        else:
+            send "&6| | &cそのコマンドは存在しません！ &6| |" to player
+            
+command /svo <text>:
+    trigger:
+        if arg-1 is "close":
+            execute console command "/whitelist on"
+            loop all players:
+                if loop-player is not an op:
+                    kick the loop-player due to "サーバーが非公開です"
+            send "&6| | &cホワリスオンじゃ！！！！！ &6| |" to player
+            stop
+        if arg-1 is "open":
+            execute console command "/whitelist off"
+            send "&6| | &cホワリスオフじゃ！！！！！ &6| |" to player
+            stop
+        else:
+            send "&6| | &cそのコマンドは存在しません！ &6| |" to player
+           
+command /noblock <text>:
+    Options:
+        parkour_map_name: <text>
+    trigger:
+        on break:
+            player is in {@parkour_map_name}
+            player's gamemode is not creative
+            cancel event 
+        on place:
+            player is in {@parkour_map_name}
+            player's gamemode is not creative
+            cancel event 
