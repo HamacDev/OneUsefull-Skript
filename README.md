@@ -1,5 +1,7 @@
 # One-Skript
 
+※下に重要な説明があります
+
 ![tgdeg](https://user-images.githubusercontent.com/81562786/115990668-700bd800-a5ff-11eb-9366-573a855d36ce.png)
 
 ------
