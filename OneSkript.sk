@@ -1,6 +1,7 @@
 ##ここから--------------------
 
 command /menu
+    executable by: console
     trigger:
         open chest with 3 row named "Welcome" to player
         set slot 13 of player's current inventory to nether_star named "&a- &7Lobby &a-"
@@ -99,6 +100,7 @@ command /lobbymuki2 [<text>]
         spawnlobbymuki2 = <text>
         send "2個目の向きを設定しました" to player
 command /lobby
+    executable by: console
     trigger:
             execute console command "/tp @p {spawnlobbyx} {spawnlobbyy} {spawnlobbyz} {spawnlobbymuki1} {spawnlobbymuki2}
         send "Teleport!" to player
