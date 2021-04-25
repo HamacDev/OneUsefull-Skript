@@ -1,5 +1,3 @@
-##ここから--------------------
-
 command /menu
     trigger:
         open chest with 3 row named "Welcome" to player
