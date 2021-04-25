@@ -1,3 +1,19 @@
+##ここから--------------------
+
+command /menu
+    trigger:
+        open chest with 3 row named "Welcome" to player
+        set slot 13 of player's current inventory to nether_star named "&a- &7Lobby &a-"
+        
+on inventory click:
+    if name of player's current inventory contain "Welcome":
+        cansel event
+        if name of clicked item is "&a- &7Lobby &a-"
+            command "/tp %player% <x> <y> <z> <muki1> <muki2>"
+## ↑ここ
+            
+##ここまで--------------------
+
 command /serveropen <text>:
     trigger:
         if arg-1 is "c":
