@@ -13,6 +13,9 @@ on inventory click:
             
 ##ここまで--------------------
 
+command /ousv
+    trigger:
+        send "&cversion &aβ.0.7"
 command /serveropen <text>:
     trigger:
         permission: skript.admin
@@ -80,6 +83,9 @@ command /os [<text>]:
         if arg-1 is not set:
             send "&cOut :何か入力してください" to player
             send "&cE&4r&cr&4o&cr&4!" to player
+
+#ここから
+
 command /lobbysetx [<text>]
     trigger:
         permission: skript.admin
@@ -110,6 +116,9 @@ command /lobby
     trigger:
             execute console command "/tp %player% {spawnlobbyx} {spawnlobbyy} {spawnlobbyz} {spawnlobbymuki1} {spawnlobbymuki2}
         send "Teleport!" to player
+        
+#ここまで不具合の塊
+
 command /an [<text>]:
     trigger:
         permission: skript.admin
