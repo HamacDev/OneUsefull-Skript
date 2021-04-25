@@ -1,7 +1,6 @@
 ##ここから--------------------
 
 command /menu
-permission: skript.player
     trigger:
         open chest with 3 row named "Welcome" to player
         set slot 13 of player's current inventory to nether_star named "&a- &7Lobby &a-"
@@ -16,6 +15,7 @@ on inventory click:
 
 command /serveropen <text>:
     trigger:
+        permission: skript.admin
         if arg-1 is "c":
             execute console command "/whitelist on"
             loop all players:
@@ -32,6 +32,7 @@ command /serveropen <text>:
             
 command /svo <text>:
     trigger:
+        permission: skript.admin
         if arg-1 is "c":
             execute console command "/whitelist on"
             loop all players:
@@ -50,6 +51,7 @@ command /noblock <text>:
     Options:
         parkour_map_name: <text>
     trigger:
+        permission: skript.admin
         on break:
             player is in {@parkour_map_name}
             player's gamemode is not creative
@@ -80,22 +82,27 @@ command /os [<text>]:
             send "&cE&4r&cr&4o&cr&4!" to player
 command /lobbysetx [<text>]
     trigger:
+        permission: skript.admin
         spawnlobbyx = <text>
         send "xを設定しました" to player
 command /lobbysety [<text>]
     trigger:
+        permission: skript.admin
         spawnlobbyy = <text>
         send "yを設定しました" to player
 command /lobbysetz [<text>]
     trigger:
+        permission: skript.admin
         spawnlobbyz = <text>
         send "zを設定しました" to player
 command /lobbymuki1 [<text>]
     trigger:
+        permission: skript.admin
         spawnlobbymuki1 = <text>
         send "1個目の向きを設定しました" to player
 command /lobbymuki2 [<text>]
     trigger:
+        permission: skript.admin
         spawnlobbymuki2 = <text>
         send "2個目の向きを設定しました" to player
 command /lobby
@@ -105,6 +112,7 @@ command /lobby
         send "Teleport!" to player
 command /an [<text>]:
     trigger:
+        permission: skript.admin
         anaunsu = <text>
         command "/tellraw @a [{"text":"【","color":"dark_blue"},{"text":"アナウンス","color":"blue"},{"text":"】 ","color":"dark_blue"},{"text":"{anaunsu}","color":"white"}]"
         send "&6| | &cアナウンスを表示&fしました。 &6| |"
