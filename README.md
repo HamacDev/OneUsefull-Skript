@@ -1,4 +1,7 @@
 # One-Skript
+
+![tgdeg](https://user-images.githubusercontent.com/81562786/115990668-700bd800-a5ff-11eb-9366-573a855d36ce.png)
+
 ------
 ベータ版です。バグの報告はメール(https://HamacDev.github.io に記載してあります)にお願いします。
 ------
