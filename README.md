@@ -1,4 +1,9 @@
 # One-Skript
+------
+ベータ版です。バグの報告はメール(https://HamacDev.github.io に記載してあります)にお願いします。
+------
+
+
 一部＆参考(というかちょっといじっただけ) : https://qiita.com/meoto2408/items/938a1035998ca80ee59e
 
 使い方
