@@ -118,8 +118,8 @@ command /hider <text>:
 		if arg 1 is "h":
 			if arg 2 or arg 3 is not set:
 				hide player in tablist of all players
-            send "&e%player% joined game"
+            send "&e%player% joined game" to player
 		if arg 1 is "s":
 			if arg 2 or arg 3 is not set:
 				show player in tablist of all players
-            send "&e%player% left the game"
+            send "&e%player% left the game" to player
