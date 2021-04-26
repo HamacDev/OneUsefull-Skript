@@ -1,4 +1,4 @@
-command /menu
+command /menu:
     trigger:
         open chest with 3 row named "Welcome" to player
         set slot 13 of player's current inventory to nether_star named "&a- &7Lobby &a-"
@@ -7,9 +7,9 @@ on inventory click:
         cansel event
         if name of clicked item is "&a- &7Lobby &a-"
             command "/tp %player% <x> <y> <z> <muki1> <muki2>"
-command /ousv
+command /ousv:
     trigger:
-        send "&cversion &aβ.0.7"
+        send "&cversion &aβ.0.8"
 command /serveropen <text>:
     permission: skript.admin
     trigger:
