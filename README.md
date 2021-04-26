@@ -51,6 +51,24 @@
 
 /lobbyでtpします。
 
+- 一応いじるやつ
+
+.skファイルの、最初が「command /hider <text>:」となっているやつがあります。そこに、
+  
+send "&e%player% joined game" to player  
+
+っていうやつと
+
+send "&e%player% left the game" to player
+
+これを自分のサーバーのログに合わせてください。
+
+例えばプレイヤー名が「Ohayou」だとすると
+
+Ohayou joined game とか Ohayou left the game とか自分のサーバーのやつに合わせてください。
+
+これでOKです。
+
 
 -------------------
 
@@ -63,7 +81,7 @@
 -
 
 
-**動作確認はしていません！！良ければ私のメールにお願いします
+バグ報告について
 
 メール：https://HamacDev.github.io に記載してあります。
 
