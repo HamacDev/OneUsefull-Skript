@@ -11,8 +11,8 @@ command /ousv
     trigger:
         send "&cversion &aβ.0.7"
 command /serveropen <text>:
+    permission: skript.admin
     trigger:
-        permission: skript.admin
         if arg-1 is "c":
             execute console command "/whitelist on"
             loop all players:
@@ -28,8 +28,8 @@ command /serveropen <text>:
             send "&6| | &cそのコマンドは存在しません！ &6| |" to player
             
 command /svo <text>:
+    permission: skript.admin
     trigger:
-        permission: skript.admin
         if arg-1 is "c":
             execute console command "/whitelist on"
             loop all players:
@@ -78,19 +78,18 @@ command /os [<text>]:
             send "&cOut :何か入力してください" to player
             send "&cE&4r&cr&4o&cr&4!" to player
 command /lobbyset <text> <text> <text> <text> <text> <text>:
-    permission: skript.all-player
+    permission: skript.admin
     trigger:
         spawnlobbyx = %arg-1%
         spawnlobbyy = %arg-2%
         spawnlobbyz = %arg-3%
         spawnlobbymuki1 = %arg-4%
         spawnlobbymuki2 = %arg-5%
-command /lobby
-    executable by: console
+command /lobby:
     trigger:
         execute console command "/tp %player% {spawnlobbyx} {spawnlobbyy} {spawnlobbyz} {spawnlobbymuki1} {spawnlobbymuki2}
         send "Teleport!" to player
-command /an <text> <player>:
+command /an <text>:
     trigger:
         permission: skript.admin
         send "&1【&9アナウンス / Announce&1】 &r%arg-1% &8by %player%" to all player
@@ -98,3 +97,29 @@ command /an <text> <player>:
     if arg-1 is not set:
         send "&cOut :何か入力してください" to player
         send "&cE&4r&cr&4o&cr&4!" to player
+command /spt <text>:
+    permission: skript.admin
+    trigger:
+        command "/tp %player% %arg-1%"
+        send "&aSecuess!" to player
+command /gm <text>:
+    permission: skript.admin
+    trigger:
+        command "/gamemode %arg-1%"
+        send "&aSeccues!" to player
+command /hider <text>:
+    permission: skript.admin
+	permission message: 権限がありません。
+	trigger:
+		if arg 1 is not set:
+			message "&a/hider h で自分を隠す /hider s で自分を戻す(join leftログをいじっている方はここをいじらないと使えません。)"
+			message "このコマンドはsiso_az様のsiso packを改変して作っています。ありがとうございます。"
+			stop
+		if arg 1 is "h":
+			if arg 2 or arg 3 is not set:
+				hide player in tablist of all players
+            send "&e%player% joined game"
+		if arg 1 is "s":
+			if arg 2 or arg 3 is not set:
+				show player in tablist of all players
+            send "&e%player% left the game"
