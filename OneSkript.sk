@@ -73,43 +73,28 @@ command /os [<text>]:
             send "Repository https://github.com/HamacDev/One-Skript" to player
             send "Portfolio https://HamacDev.github.io" to player
         if arg-1 is "by":
-            send "by Hamac" to player
+            send "&8(^o^) HI" to player
         if arg-1 is not set:
             send "&cOut :何か入力してください" to player
             send "&cE&4r&cr&4o&cr&4!" to player
-command /lobbysetx [<text>]
+command /lobbyset <text> <text> <text> <text> <text> <text>:
+    permission: skript.all-player
     trigger:
-        permission: skript.admin
-        spawnlobbyx = <text>
-        send "xを設定しました" to player
-command /lobbysety [<text>]
-    trigger:
-        permission: skript.admin
-        spawnlobbyy = <text>
-        send "yを設定しました" to player
-command /lobbysetz [<text>]
-    trigger:
-        permission: skript.admin
-        spawnlobbyz = <text>
-        send "zを設定しました" to player
-command /lobbymuki1 [<text>]
-    trigger:
-        permission: skript.admin
-        spawnlobbymuki1 = <text>
-        send "1個目の向きを設定しました" to player
-command /lobbymuki2 [<text>]
-    trigger:
-        permission: skript.admin
-        spawnlobbymuki2 = <text>
-        send "2個目の向きを設定しました" to player
+        spawnlobbyx = %arg-1%
+        spawnlobbyy = %arg-2%
+        spawnlobbyz = %arg-3%
+        spawnlobbymuki1 = %arg-4%
+        spawnlobbymuki2 = %arg-5%
 command /lobby
     executable by: console
     trigger:
-            execute console command "/tp %player% {spawnlobbyx} {spawnlobbyy} {spawnlobbyz} {spawnlobbymuki1} {spawnlobbymuki2}
+        execute console command "/tp %player% {spawnlobbyx} {spawnlobbyy} {spawnlobbyz} {spawnlobbymuki1} {spawnlobbymuki2}
         send "Teleport!" to player
-command /an [<text>]:
+command /an <text> <player>:
     trigger:
         permission: skript.admin
-        anaunsu = <text>
-        command "/tellraw @a [{"text":"【","color":"dark_blue"},{"text":"アナウンス","color":"blue"},{"text":"】 ","color":"dark_blue"},{"text":"{anaunsu}","color":"white"}]"
-        send "&6| | &cアナウンスを表示&fしました。 &6| |"
+        send "&1【&9アナウンス / Announce&1】 &r%arg-1% &8by %player%" to all player
+        send "&9送信できました！ / Sessues!"
+    if arg-1 is not set:
+        send "&cOut :何か入力してください" to player
+        send "&cE&4r&cr&4o&cr&4!" to player
