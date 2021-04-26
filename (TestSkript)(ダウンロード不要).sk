@@ -2,3 +2,6 @@ on join:
     loop all players:
         send "&a%player%&rさん、&cようこそ！" to player
         send "&c&nルール&rは&a&nお読みになりましたか？" to player
+on join:
+    loop all players:
+        send "Welcome" to loop-player
