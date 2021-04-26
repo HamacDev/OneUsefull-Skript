@@ -123,3 +123,13 @@ command /hider <text>:
 			if arg 2 or arg 3 is not set:
 				show player in tablist of all players
             send "&e%player% left the game" to player
+command /aban <text> <text>:
+    trigger:
+        command "/ban %arg-1% %arg-2%"
+	send "&a%arg-1%&rさんが&cBAN&rされました！ &8(理由:%arg-2%) &r執行人:&c%player%" to all player
+	send "&aSeccues!" to player
+command /aban-ip <text> <text>:
+    trigger:
+        command "/ban-ip %arg-1% %arg-2%"
+	send "&a%arg-1%&rさんが&cIPBAN&rされました！ &8(理由:%arg-2%) &r執行人:&c%player%" to all player
+	send "&aSeccues!" to playear
