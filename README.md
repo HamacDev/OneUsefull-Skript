@@ -70,3 +70,5 @@
 私がMinecraftのSkriptを作ったやつを配布しよ〜ってやつです。
 
 ※Skriptをマジで何も勉強せずQiitaの記事を1つ見ただけで作ったやつです。
+
+![tgdeg](https://skripthub.net/static/img/ogLogo.png)
