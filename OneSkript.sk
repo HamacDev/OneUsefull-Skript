@@ -100,12 +100,13 @@ command /an <text>:
 command /spt <text>:
     permission: skript.admin
     trigger:
-        command "/tp %player% %arg-1%"
+        execute console command "/tp %player% %arg-1%"
+	execute console command "/gamemode sp %player%"
         send "&aSecuess!" to player
 command /gm <text>:
     permission: skript.admin
     trigger:
-        command "/gamemode %arg-1%"
+        execute console command "/gamemode %arg-1%"
         send "&aSeccues!" to player
 command /hider <text>:
     permission: skript.admin
@@ -125,11 +126,11 @@ command /hider <text>:
             send "&e%player% left the game" to player
 command /aban <text> <text>:
     trigger:
-        command "/ban %arg-1% %arg-2%"
+        execute console command "/ban %arg-1% %arg-2%"
 	send "&a%arg-1%&rさんが&cBAN&rされました！ &8(理由:%arg-2%) &r執行人:&c%player%" to all player
 	send "&aSeccues!" to player
 command /aban-ip <text> <text>:
     trigger:
-        command "/ban-ip %arg-1% %arg-2%"
+        execute console command "/ban-ip %arg-1% %arg-2%"
 	send "&a%arg-1%&rさんが&cIPBAN&rされました！ &8(理由:%arg-2%) &r執行人:&c%player%" to all player
 	send "&aSeccues!" to playear
